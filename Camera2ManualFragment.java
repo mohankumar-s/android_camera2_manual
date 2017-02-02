@@ -408,7 +408,7 @@ public class Camera2BasicFragment extends Fragment
         } else if (notBigEnough.size() > 0) {
             return Collections.max(notBigEnough, new CompareSizesByArea());
         } else {
-            Log.e(TAG, "Couldn't find any suitable preview size");
+            Log.e(TAG, "Couldn't find any suitable preview size fareed");
             return choices[0];
         }
     }
@@ -810,7 +810,7 @@ public class Camera2BasicFragment extends Fragment
 
     public void createCameraPreviewSession_iso() {
         try {
-            
+
             mPreviewRequestBuilder.set(CaptureRequest.SENSOR_SENSITIVITY, seekIso);
             mPreviewRequest = mPreviewRequestBuilder.build();
             mCaptureSession.setRepeatingRequest(mPreviewRequest, mCaptureCallback, mBackgroundHandler);
